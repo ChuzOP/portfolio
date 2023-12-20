@@ -1,0 +1,50 @@
+---
+import type { Project } from "../../data/projects";
+import Text from "../atoms/Text.astro";
+import TagTooltip from "../atoms/TagTooltip.tsx";
+import IconButton from "../atoms/IconButton";
+import Github from "../../icons/Github.astro";
+import Figma from "../../icons/Figma.astro";
+import Link from "../../icons/Link.astro";
+import Button from "../atoms/Button.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row gap-3 md:gap-5 my-4">
+  <picture class="bg-primary/40 rounded-2xl w-full md:w-1/2">
+    <div class="h-48 w-full"></div>
+  </picture>
+  <div class="flex flex-col md:w-1/2 gap-2">
+    <Text variant="title" bold>{project.name}</Text>
+    <Text variant="description">{project.description}</Text>
+    <div class="flex flex-wrap gap-2">
+      {
+        project.technologies.map((technology: any, index) => (
+          <TagTooltip client:visible tag={technology} />
+        ))
+      }
+    </div>
+    <div class="flex gap-2 items-center">
+      {
+        project.githubLink && (
+          <Button text="Code" href={project.githubLink} Icon={Github} />
+        )
+      }
+      {
+        project.liveLink && (
+          <Button text="Live" href={project.liveLink} Icon={Link} />
+        )
+      }
+      {
+        project.figmaLink && (
+          <Button text="Design" href={project.figmaLink} Icon={Figma} />
+        )
+      }
+    </div>
+  </div>
+</div>

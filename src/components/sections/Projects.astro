@@ -1,0 +1,12 @@
+---
+import Text from "../atoms/Text.astro";
+import ProjectCard from "../organisms/ProjectCard.astro";
+
+import { projects } from "../../data/projects";
+---
+
+<div class="flex flex-col py-4" id="projects">
+  <Text variant="subtitle" bold>Proyectos</Text>
+  <hr class="mb-3 border-white/30" />
+  {projects.map((project, index) => <ProjectCard project={project} />)}
+</div>

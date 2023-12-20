@@ -1,0 +1,32 @@
+---
+interface Props {
+  variant: "title" | "subtitle" | "paragraph" | "description" | "text";
+  bold?: boolean;
+  medium?: boolean;
+  semibold?: boolean;
+  light?: boolean;
+  center?: boolean;
+}
+const { variant, bold, medium, semibold, light, center } = Astro.props;
+---
+
+<div
+  class:list={[
+    "text-text",
+    {
+      "font-bold": bold,
+      "font-medium": medium,
+      "font-semibold": semibold,
+      "font-thin": light,
+      "text-4xl leading-10 text-white": variant == "title",
+      "text-2xl leading-10 text-white": variant === "subtitle",
+      "text-xl leading-7": variant === "paragraph",
+      "text-lg leading-6": variant === "description",
+      "text-base leading-5": variant === "text",
+      "text-center": center,
+    },
+  ]}
+>
+  <div class="text-2xl leading-10"></div>
+  <slot />
+</div>

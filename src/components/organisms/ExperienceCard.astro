@@ -1,0 +1,46 @@
+---
+import type { Experience } from "../../data/experiences";
+import IconButton from "../atoms/IconButton";
+import Linkedin from "../../icons/Linkedin.astro";
+
+interface Props {
+  experience: Experience;
+}
+
+const { experience } = Astro.props;
+---
+
+<div class="flex flex-col gap-2 my-4">
+  <div class="flex flex-col">
+    <div class="flex flex-row gap-2 items-center">
+      <div class="text-2xl leading-10 text-white/90 font-normal">
+        {`${experience.position} | ${experience.place}`}
+      </div>
+      {
+        experience.linkedin && (
+          <IconButton
+            client:visible
+            text="LinkedIn"
+            color="bg-[#0077b5] w-fit h-fit"
+            href={experience.linkedin}
+          >
+            <Linkedin />
+          </IconButton>
+        )
+      }
+    </div>
+    <div class="text-base leading-6 text-white/60">{experience.date}</div>
+  </div>
+  <ul class="list-disc pl-5">
+    {
+      experience.description.map((description, index) => (
+        <li class="relative text-[#D1D5D8]">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+            <span class="w-2 h-2 bg-lightgray rounded-full" />
+          </span>
+          {description}
+        </li>
+      ))
+    }
+  </ul>
+</div>

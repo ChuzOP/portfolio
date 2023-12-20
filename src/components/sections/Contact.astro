@@ -1,0 +1,13 @@
+---
+import Text from "../atoms/Text.astro";
+import ContactInfo from "../organisms/ContactInfo.tsx";
+---
+
+<div class="flex flex-col" id="contact">
+  <Text variant="subtitle" bold>Contacto</Text>
+  <hr class="mb-3 border-white/30" />
+  <div class="flex flex-col gap-2">
+    <ContactInfo client:visible value="dejesusgarciaop@gmail.com" text="Email:" />
+    <ContactInfo client:visible value="chuzOP" text="Github User:" />
+  </div>
+</div>
