@@ -1,17 +1,21 @@
-
 const Menu = ({ className, onClick }: any) => {
   return (
     <svg
       className={className}
       onClick={onClick}
       width="24"
-      height="18"
-      viewBox="0 0 24 18"
+      height="24"
+      viewBox="0 0 24 24"
+      strokeWidth="2"
+      stroke="currentColor"
       fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     >
-      <rect width="16" height="2" fill="white" />
-      <rect y="8" width="24" height="2" fill="white" />
-      <rect x="8" y="16" width="16" height="2" fill="white" />
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M4 6l16 0" />
+      <path d="M4 12l16 0" />
+      <path d="M4 18l16 0" />
     </svg>
   );
 };
