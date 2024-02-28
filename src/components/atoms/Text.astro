@@ -19,8 +19,7 @@ const { variant, bold, medium, semibold, light, center } = Astro.props;
       "font-semibold": semibold,
       "font-thin": light,
       "text-4xl leading-10 text-yellow-200": variant == "title",
-      "text-2xl leading-10 text-blue-300": variant === "subtitle",
-      // "text-2xl leading-10 text-[#8a98fe]": variant === "subtitle",
+      "text-2xl leading-10 !text-blue-300": variant === "subtitle",
       "text-xl leading-7": variant === "paragraph",
       "text-lg leading-6": variant === "description",
       "text-base leading-5": variant === "text",
@@ -28,6 +27,5 @@ const { variant, bold, medium, semibold, light, center } = Astro.props;
     },
   ]}
 >
-  <div class="text-2xl leading-10"></div>
   <slot />
 </div>
