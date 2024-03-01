@@ -8,10 +8,10 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    position: "Frontend React Developer",
+    position: "FullStack React Developer",
     linkedin: "https://gt.linkedin.com/company/techxperto",
     place: "TechXperto",
-    date: "Jan 2023 - Actually",
+    date: "Nov 2022 - Feb 2024",
     description: [
       "Desarrollando y dandole mantenimiento a aplicaciones web con NextJS y MySQL.",
       "Colaborando de manera efectiva en equipos distribuidos a través de git y GitHub, gestionando múltiples ramas de código.",

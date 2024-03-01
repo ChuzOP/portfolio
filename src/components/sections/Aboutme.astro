@@ -6,14 +6,24 @@ import Linkedin from "../../icons/Linkedin.astro";
 import PDF from "../../icons/PDF.astro";
 ---
 
-<div class="flex flex-col md:flex-row mt-12 mb-4 items-center gap-6" id="aboutme">
-  <picture class="h-40 w-40">
-    <img src="/images/profile.jpg" alt="profile" class="rounded-full" />
-  </picture>
-  <div class="flex flex-col gap-2">
-    <Text variant="title" bold>ChuzOP</Text>
-    <Text variant="paragraph" light center>
-      Un apasionado de la tecnología y la programación
+<div
+  class="flex flex-col md:flex-row mt-40 mb-4 items-center gap-6"
+  id="aboutme"
+>
+  <div class="md:w-1/4 flex items-center">
+    <picture class="h-40 w-40">
+      <img src="/images/profile.jpg" alt="profile" class="rounded-full" />
+    </picture>
+  </div>
+  <div class="flex flex-col gap-2 md:w-3/4">
+    <div class="flex">
+      <Text variant="title" bold class="!text-white mr-1">Hola,&nbsp;</Text>
+      <Text variant="title" bold>soy Miguel!</Text>
+    </div>
+    <Text variant="paragraph" light>
+      Desarrollador Web Full-stack con más de un año de experiencia,
+      especializado en NextJS y MySQL. Apasionado por la tecnología y la
+      innovación.
     </Text>
     <div class="flex gap-2 justify-center md:justify-normal mt-2 md:mt-0">
       <IconButton
@@ -25,7 +35,7 @@ import PDF from "../../icons/PDF.astro";
       >
         <Github />
       </IconButton>
-      <IconButton client:visible text="@ChuzOP" color="bg-[#0077b5]">
+      <IconButton client:visible text="@ChuzOP" color="bg-[#0077b5]" href="https://www.linkedin.com/in/jesus-garc%C3%ADa-aa22a92a8/">
         <Linkedin />
       </IconButton>
       <IconButton client:visible text="CV" color="bg-[#EF4040]" pdf>

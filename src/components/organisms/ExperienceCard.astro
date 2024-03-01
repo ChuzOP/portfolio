@@ -13,8 +13,8 @@ const { experience } = Astro.props;
 <div class="flex flex-col gap-2 my-4">
   <div class="flex flex-col">
     <div class="flex flex-row gap-2 items-center">
-      <div class="text-2xl leading-10 text-white/90 font-normal">
-        {`${experience.position} | ${experience.place}`}
+      <div class="text-2xl leading-10 text-white/90 font-normal flex">
+        {`${experience.position} - `} <div class="font-bold text-textAccent">&nbsp;{experience.place}</div>
       </div>
       {
         experience.linkedin && (

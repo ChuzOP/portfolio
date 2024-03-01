@@ -10,52 +10,50 @@ import Header from "../components/sections/Header.tsx";
     <meta name="generator" content={Astro.generator} />
     <title>Portfolio | ChuzOP</title>
   </head>
-  <body class="bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] relative">
-    <!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> -->
-    <!-- <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div> -->
+  <body class="bg-background relative">
     <Header client:visible />
     <main class="mx-auto max-w-3xl h-auto px-5 my-10 flex flex-col gap-10">
       <slot />
     </main>
     <style is:global>
       html {
-        font-family: "Jakarta", system-ui, sans-serif;
+        font-family: "Onest", system-ui, sans-serif;
         color: rgb(241, 245, 249);
         scroll-behavior: smooth;
         color-scheme: light dark;
       }
       @font-face {
-        font-family: "Jakarta";
-        src: url("/fonts/PlusJakartaSans-Light.ttf") format("ttf");
+        font-family: "Onest";
+        src: url("/fonts/Onest-Light.ttf") format("truetype");
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: "Jakarta";
-        src: url("/fonts/PlusJakartaSans-Regular.ttf") format("ttf");
+        font-family: "Onest";
+        src: url("/fonts/Onest-Regular.ttf") format("truetype");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Jakarta";
-        src: url("/fonts/PlusJakartaSans-Medium.ttf") format("ttf");
+        font-family: "Onest";
+        src: url("/fonts/Onest-Medium.ttf") format("truetype");
         font-weight: 500;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Jakarta";
-        src: url("/fonts/PlusJakartaSans-SemiBold.ttf") format("ttf");
+        font-family: "Onest";
+        src: url("/fonts/Onest-SemiBold.ttf") format("truetype");
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
-        font-family: "Jakarta";
-        src: url("/fonts/PlusJakartaSans-Bold.ttf") format("ttf");
+        font-family: "Onest";
+        src: url("/fonts/Onest-Bold.ttf") format("truetype");
         font-weight: 700;
         font-style: normal;
         font-display: swap;

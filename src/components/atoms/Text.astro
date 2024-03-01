@@ -6,8 +6,9 @@ interface Props {
   semibold?: boolean;
   light?: boolean;
   center?: boolean;
+  class?: string;
 }
-const { variant, bold, medium, semibold, light, center } = Astro.props;
+const { variant, bold, medium, semibold, light, center, class: extraClass } = Astro.props;
 ---
 
 <div
@@ -18,13 +19,14 @@ const { variant, bold, medium, semibold, light, center } = Astro.props;
       "font-medium": medium,
       "font-semibold": semibold,
       "font-thin": light,
-      "text-4xl leading-10 text-yellow-200": variant == "title",
-      "text-2xl leading-10 !text-blue-300": variant === "subtitle",
+      "text-4xl leading-10 !text-primary": variant == "title",
+      "text-2xl leading-10 !text-secondary": variant === "subtitle",
       "text-xl leading-7": variant === "paragraph",
       "text-lg leading-6": variant === "description",
       "text-base leading-5": variant === "text",
       "text-center": center,
     },
+    extraClass
   ]}
 >
   <slot />
