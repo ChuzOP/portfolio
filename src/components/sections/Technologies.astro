@@ -1,0 +1,14 @@
+---
+import Text from "../atoms/Text.astro";
+import TechCard from "../organisms/TechCard.astro";
+
+import { technologies } from "../../data/technologies";
+---
+
+<section class="flex flex-col py-4" id="technologies">
+  <Text variant="subtitle" bold>Tecnologías</Text>
+  <hr class="mb-3 border-white/30" />
+  <div class="grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center">
+    {technologies.map((technology) => <TechCard technology={technology} />)}
+  </div>
+</section>

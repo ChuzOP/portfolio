@@ -1,6 +1,6 @@
 import React from "react";
 
-const CssIcon = () => {
+const CssIcon = ({ className = "" }: {className?: string}) => {
   return (
     <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
       <path d="M9 42L6 4.5H42L39 42L24 46.5L9 42Z" fill="#1172B8"></path>

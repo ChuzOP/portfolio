@@ -1,0 +1,29 @@
+---
+import type { Technology } from "../../data/technologies";
+
+interface Props {
+  technology: Technology;
+}
+
+const { technology } = Astro.props;
+// <img src="/public/icons/html.svg" alt={tech.text} />
+// <img src="/icons/html.svg" alt={tech.text} />
+---
+
+<div
+  class="relative rounded-2xl p-6 dark:border dark:border-dark-900"
+>
+  <div class="text-2xl leading-10 flex font-bold text-textAccent" style={`color: ${technology.title_color} !important`}>
+    {technology.title}
+  </div>
+  <ul class="grid grid-cols-3 gap-4">
+    {
+      technology.technologies.map((tech) => (
+        <li class="rounded-2xl group flex flex-col fle justify-center items-center">
+          <Fragment set:html={tech.icon} class="w-4 h-4" alt={tech.text} />
+          <span class=" text-sm w-full text-center">{tech.text}</span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
