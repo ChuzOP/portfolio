@@ -1,0 +1,87 @@
+---
+import Text from "../../components/atoms/Text.astro";
+import TitlePage from "../../components/organisms/TitlePage.astro";
+import Container from "../../layouts/Container.astro";
+
+const funcionalidades = [
+  "Control de las distintas fases de un pedido",
+  "Rastreo en tiempo casi real de los pedidos",
+  "Gestión de notificaciones push",
+  "Envío automático de correos electrónicos basado en múltiples procesos",
+];
+
+const responsabilidades = [
+  "Solución de errores y refactorización de funcionalidades heredadas",
+  "Coordinar reuniones periódicas con el cliente para el seguimiento del sistema",
+];
+
+const tecnologias = [
+  "ReactJS y React Native",
+  "JavaScript y TypeScript",
+  "MySQL con Sequelize",
+  "NextJS",
+];
+---
+
+<Container>
+  <TitlePage title={"Applicación de comida por delivery"} />
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Descripción</Text>
+    <hr class="mb-3 border-white/30" />
+    <Text variant="description">
+      Desarrollo de múltiples aplicaciones móviles para un cliente
+      internacional, incluyendo tres aplicaciones distintas: una para delivery,
+      otra para los cocineros y una más para los usuarios finales. Además, se
+      creó un portal administrativo para gestionar usuarios, platillos y
+      entregas. El sistema es una aplicación escalable similar a Uber Eats.
+    </Text>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Funcionalidades destacadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        funcionalidades.map((funcionalidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {funcionalidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Responsabilidades durante el desarrollo</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        responsabilidades.map((responsabilidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {responsabilidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Tecnologías usadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        tecnologias.map((tecnologia) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {tecnologia}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Container>

@@ -1,0 +1,96 @@
+---
+import Text from "../../components/atoms/Text.astro";
+import TitlePage from "../../components/organisms/TitlePage.astro";
+import Container from "../../layouts/Container.astro";
+
+const funcionalidades = [
+  "Gestión de usuarios con permisos personalizados",
+  "Generación de reportes detallados y específicos",
+  "Implementación de lógica de negocio avanzada",
+  "Conversión de reportes de JSON a PDF utilizando PDFViewer",
+  "Administración de nomenclaturas y cuentas para múltiples empresas",
+];
+
+const responsabilidades = [
+  "Analizar y comprender a fondo la lógica del negocio",
+  "Coordinar reuniones regulares con el cliente para el seguimiento del sistema",
+  "Interacción directa con clientes",
+];
+
+const tecnologias = [
+  "ReactJS",
+  "NextJS",
+  "Tailwind CSS",
+  "JavaScript y TypeScript",
+  "PDFViewer",
+  "MySQL",
+];
+
+---
+
+<Container>
+  <TitlePage title={"Sistema Contable"} />
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Descripción</Text>
+    <hr class="mb-3 border-white/30" />
+    <Text variant="description">
+      Sistema web full-stack diseñado para contadores que permite gestionar
+      múltiples empresas con distintos roles de usuario. El sistema se alimenta
+      de documentos tributarios, incluyendo facturas de diversos tipos y
+      retenciones de IVA e ISR. Ofrece la capacidad de generar asientos
+      contables con sus respectivas partidas. También permite la generación de
+      reportes contables como el libro de compras, ventas, diario, mayor,
+      balance general y estado de resultados. Además, facilita la creación de
+      formularios como el "Formulario para IVA mensual" y el "Formulario para
+      ISR mensual".
+    </Text>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Funcionalidades destacadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        funcionalidades.map((funcionalidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {funcionalidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Responsabilidades durante el desarrollo</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        responsabilidades.map((responsabilidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {responsabilidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Tecnologías usadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        tecnologias.map((tecnologia) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {tecnologia}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Container>

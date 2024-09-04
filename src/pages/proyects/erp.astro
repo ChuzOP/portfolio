@@ -1,0 +1,94 @@
+---
+import Text from "../../components/atoms/Text.astro";
+import TitlePage from "../../components/organisms/TitlePage.astro";
+import Container from "../../layouts/Container.astro";
+
+const funcionalidades = [
+  "Gestión de usuarios con distintos roles y permisos personalizados",
+  "Generación de reportes específicos, incluyendo el Kardex",
+  "Administración de traslados de mercadería entre sucursales",
+  "Visualización de tablas anidadas con detalles completos",
+  "Maquetación de reportes de JSON a PDF con PDFViewer"
+];
+
+const responsabilidades = [
+  "Refactorización de procesos existentes",
+  "Migración desde un sistema legado",
+];
+
+const tecnologias = [
+  "ReactJS",
+  "NextJS",
+  "Pre-procesador de estilos SASS",
+  "JavaScript y TypeScript",
+  "AWS RDS",
+  "AWS Cognito",
+  "PDFViewer"
+];
+
+---
+
+<Container>
+  <TitlePage title={"ERP web"} />
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Descripción</Text>
+    <hr class="mb-3 border-white/30" />
+    <Text variant="description">
+      Sistema web full-stack diseñado para un almacén con múltiples sucursales y
+      usuarios con diferentes roles. Incluye cifrado con Cognito y gestión de
+      inventario adaptada a la lógica del negocio. Ofrece un punto de venta y
+      gestión de productos con proveedores, así como un área de reportes que
+      incluye el kardex, informes de compras y ventas, y estadísticas sobre los
+      asesores con mayores ventas y los productos más vendidos en un período
+      determinado.
+    </Text>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Funcionalidades destacadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        funcionalidades.map((funcionalidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {funcionalidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Responsabilidades durante el desarrollo</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        responsabilidades.map((responsabilidad) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {responsabilidad}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col">
+    <Text variant="subtitle" bold>Tecnologías usadas</Text>
+    <hr class="mb-3 border-white/30" />
+    <ul class="list-disc pl-5">
+      {
+        tecnologias.map((tecnologia) => (
+          <li class="relative text-[#D1D5D8]">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-1">
+              <span class="w-2 h-2 bg-lightgray rounded-full" />
+            </span>
+            {tecnologia}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Container>
