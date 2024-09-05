@@ -21,24 +21,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "ERP web",
+    name: "ERP Web",
     description:
-      "Sistema full-stack multi usuario con gestión de inventario, punto de venta y generador de reportes PDF",
+      "Sistema full-stack multiusuario con gestión de inventario, punto de venta y generación de reportes en PDF.",
     technologies: [1, 2, 5, 6, 7, 9],
-    href: "/proyects/erp",
+    href: "/projects/erp",
   },
   {
     name: "Sistema Contable",
     description:
-      "Gestor de facturas de compras y ventas alimentado por archivos XML y CSV y generando reportes contables como libros de compras, ventas, diario, mayor y balance",
-      technologies: [6, 7, 8, 9],
-    href: "/proyects/contable",
+      "Gestor de facturas de compras y ventas mediante XML y CSV, con reportes contables como libros de compras, ventas, diario, mayor y balance.",
+    technologies: [6, 7, 8, 9],
+    href: "/projects/contable",
   },
   {
     name: "App Delivery Food",
     description:
-      "Aplicación mobile multiplataforma para cocineros y deilveries",
+      "Aplicación móvil multiplataforma para cocineros y repartidores.",
     technologies: [4, 5, 9],
-    href: "/proyects/app-delivery",
+    href: "/projects/app-delivery",
   },
 ];
